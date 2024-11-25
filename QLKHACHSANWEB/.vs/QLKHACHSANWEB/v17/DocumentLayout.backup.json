@@ -1,0 +1,250 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|c:\\users\\admin\\source\\repos\\qlkhachsanweb\\qlkhachsanweb\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\views\\users\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\migrations\\202411210218270_themuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\migrations\\202411210218270_themuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\models\\qlkhachsancontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\models\\qlkhachsancontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\views\\home\\doiphong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\views\\home\\doiphong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\views\\home\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\views\\home\\chitiet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\views\\shared\\_layoutpage1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\views\\shared\\_layoutpage1.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\views\\shared\\_layoutpage2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\views\\shared\\_layoutpage2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\views\\home\\phieudatphong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\views\\home\\phieudatphong.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\qlkhachsanweb\\views\\traphong\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{41CB902B-4F9D-4862-84D9-F19A13775975}|QLKHACHSANWEB\\QLKHACHSANWEB.csproj|solutionrelative:qlkhachsanweb\\views\\traphong\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Users\\login.cshtml",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Views\\Users\\login.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Users\\login.cshtml",
+              "RelativeToolTip": "QLKHACHSANWEB\\Views\\Users\\login.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T02:26:22.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "QLKHACHSANWEB\\Views\\Users\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-21T02:21:15.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "QLKHACHSANWEB\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAwH0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T02:20:38.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "202411210218270_themuser.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Migrations\\202411210218270_themuser.cs",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Migrations\\202411210218270_themuser.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Migrations\\202411210218270_themuser.cs",
+              "RelativeToolTip": "QLKHACHSANWEB\\Migrations\\202411210218270_themuser.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T02:18:32.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QLKhachSanContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Models\\QLKhachSanContext.cs",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Models\\QLKhachSanContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Models\\QLKhachSanContext.cs",
+              "RelativeToolTip": "QLKHACHSANWEB\\Models\\QLKhachSanContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T02:13:05.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Models\\User.cs",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Models\\User.cs",
+              "RelativeToolTip": "QLKHACHSANWEB\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T02:11:41.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\TraPhong\\Index.cshtml",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Views\\TraPhong\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\TraPhong\\Index.cshtml",
+              "RelativeToolTip": "QLKHACHSANWEB\\Views\\TraPhong\\Index.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAFMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-31T02:50:29.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "QLKHACHSANWEB\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAFsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-31T02:22:38.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChiTiet.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Home\\ChiTiet.cshtml",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Views\\Home\\ChiTiet.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Home\\ChiTiet.cshtml",
+              "RelativeToolTip": "QLKHACHSANWEB\\Views\\Home\\ChiTiet.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-31T00:59:48.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DoiPhong.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Home\\DoiPhong.cshtml",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Views\\Home\\DoiPhong.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Home\\DoiPhong.cshtml",
+              "RelativeToolTip": "QLKHACHSANWEB\\Views\\Home\\DoiPhong.cshtml",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAAALYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-19T13:20:58.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_LayoutPage2.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Shared\\_LayoutPage2.cshtml",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Views\\Shared\\_LayoutPage2.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Shared\\_LayoutPage2.cshtml",
+              "RelativeToolTip": "QLKHACHSANWEB\\Views\\Shared\\_LayoutPage2.cshtml",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAB8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-19T13:10:23.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_LayoutPage1.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Shared\\_LayoutPage1.cshtml",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Views\\Shared\\_LayoutPage1.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Shared\\_LayoutPage1.cshtml",
+              "RelativeToolTip": "QLKHACHSANWEB\\Views\\Shared\\_LayoutPage1.cshtml",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-19T13:09:53.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PhieuDatPhong.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Home\\PhieuDatPhong.cshtml",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Views\\Home\\PhieuDatPhong.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Views\\Home\\PhieuDatPhong.cshtml",
+              "RelativeToolTip": "QLKHACHSANWEB\\Views\\Home\\PhieuDatPhong.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-19T12:52:47.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "QLKHACHSANWEB\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\QLKHACHSANWEB\\QLKHACHSANWEB\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "QLKHACHSANWEB\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAYwMgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T06:20:15.771Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

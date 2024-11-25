@@ -1,0 +1,126 @@
+﻿@model List<QLKHACHSANWEB.Models.Phong>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<style>
+    .card-custom {
+        background-color: #28a745; /* Green background */
+        color: white; /* White text color */
+        height: 200px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+        .card-custom:hover {
+            transform: scale(1.05); /* Slightly grow on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+        }
+
+        .card-custom h1 {
+            font-size: 2.5rem; /* Large font for room name */
+            font-weight: bold;
+        }
+
+        .card-custom p {
+            font-size: 1.2rem; /* Medium font for room status */
+        }
+
+        .card-custom.red {
+            background-color: #CC6666; /* Red background for status = 1 */
+        }
+
+        .card-custom.yellow {
+            background-color: #FFD966; /* Yellow background for status = 2 */
+            color: black; /* Black text for better contrast on yellow */
+        }
+
+    .container-fluid {
+        margin-top: 20px;
+    }
+
+    button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: #007bff; /* Blue background for buttons */
+        transition: background-color 0.3s ease;
+    }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    .text-reset {
+        color: white; /* White link text */
+    }
+
+        .text-reset:hover {
+            text-decoration: underline; /* Underline link on hover */
+        }
+</style>
+
+
+<div class="container-fluid" style="border:solid 1px;min-height:1072px">
+    <div class="col-12 mb-2">
+        <i style="font-size:20px" class="fa-solid fa-table-list"></i> Sơ đồ Phòng
+    </div>
+
+    <form action="/Home/index/@ViewBag.strSearch" method="get">
+        <div class="container-fluid">
+            <h5>Loại Phòng</h5>
+            @foreach (var item in ViewBag.loai)
+            {
+                <button type="submit" value="@item.TenLoai" id="strSearch" name="strSearch">@item.TenLoai</button>
+            }
+        </div>
+        <h5>Trạng thái phòng</h5>
+        <button type="submit" value="0" id="strSearch" style=" background-color: #28a745;" name="sr">Phòng trống (0)</button>
+        <button type="submit" value="1" id="strSearch" style="background-color: #CC6666; " name="sr">Có Khách (1)</button>
+        <button type="submit" value="2" id="strSearch" style="background-color: #FFD966 " name="sr">Đang dọn dẹp (2)</button>
+    </form>
+
+    <div style="margin: 30px"></div>
+
+    <div class="container-fluid text-center">
+        <div class="row row-col-8 gx-2 gy-2">
+            @foreach (var item in Model)
+            {
+                var cardClass = "card-custom"; // Default class for the card
+
+                // Change class based on the status
+                if (item.TrangThai == 1)
+                {
+                    cardClass += " red";
+                }
+                else if (item.TrangThai == 2)
+                {
+                    cardClass += " yellow";
+                }
+                else
+                {
+                    cardClass += "";
+                }
+                <div class="col-2">
+                    <div class="card @cardClass ratio ratio-1x1">
+                        <div class="card-body">
+                            <h1>
+                                <a class="text-reset text-decoration-none" href="/TraPhong/ChiTietTP/@item.PhongId">
+                                    @item.PhongName
+                                </a>
+                            </h1>
+                            <p>@item.TrangThai</p>
+                            <h4>@item.LoaiPhong.TenLoai</h4>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

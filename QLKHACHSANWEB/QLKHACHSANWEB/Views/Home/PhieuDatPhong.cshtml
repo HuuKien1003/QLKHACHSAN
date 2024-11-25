@@ -1,0 +1,63 @@
+﻿@model QLKHACHSANWEB.Models.KhachHang
+
+@{
+    ViewBag.Title = "Phiếu Đặt Phòng";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<div class="container mt-5 p-5 bg-light border rounded shadow">
+    <form action="/Home/PhieuDatPhong/@ViewBag.maKH" method="post" class="p-4">
+        <h1 class="text-center mb-4 text-primary">Phiếu Đặt Phòng</h1>
+
+        <div class="form-group mb-3">
+            <label for="KhachHangId" class="form-label">Mã Khách Hàng</label>
+            <input class="form-control border-primary" value="@(ViewBag.maKH)" id="KhachHangId" name="KhachHangId" readonly />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="KhachHangName" class="form-label">Tên Khách Hàng</label>
+            <input type="text" class="form-control border-primary" id="KhachHangName" value="@ViewBag.tenKH" name="KhachHangName" readonly />
+        </div>
+        <div class="form-group mb-3">
+            <label for="KhachHangId" class="form-label">Số điện thoại</label>
+            <input class="form-control border-primary" value="@ViewBag.sdt" readonly />
+        </div>
+
+        <div class="row mb-3">
+            <div class="col">
+                <label for="NgayDat" class="form-label">Bạn Ở Từ Hôm Nào?</label>
+                <input class="form-control border-primary" type="date" id="NgayDat" name="NgayDat" />
+            </div>
+            <div class="col">
+                <label for="SoNgay" class="form-label">Bạn Ở Mấy Hôm?</label>
+                <input class="form-control border-primary" type="number" min="1" max="30" value="1" id="SoNgay" name="SoNgay" />
+            </div>
+        </div>
+
+        <h2 class="mt-4 text-secondary">Dịch vụ Khác</h2>
+        @foreach (var item in ViewBag.DichVus)
+        {
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="@item.DichVuId" name="DichVuId[]" value="@item.DichVuId" onclick="toggleQuantity('@item.DichVuId', 'SL_@item.DichVuId')">
+                <label class="form-check-label" for="@item.DichVuId">@item.DichVuName - giá: @item.Gia</label>
+                <input type="number" class="form-control mt-2 border-secondary" id="SL_@item.DichVuId" name="SoLuong[]" value="1" disabled />
+            </div>
+        }
+
+        <div class="text-center mt-4">
+            <input class="btn btn-success btn-lg px-5 py-2" type="submit" value="Đặt Phòng" />
+        </div>
+    </form>
+</div>
+
+<script>
+    function toggleQuantity(serviceId, quantityId) {
+        var service = document.getElementById(serviceId);
+        var quantity = document.getElementById(quantityId);
+        quantity.disabled = !service.checked;
+    }
+
+    var homnay = new Date().toISOString().substring(0, 10);
+    document.getElementById('NgayDat').value = homnay;
+    document.getElementById('NgayDat').min = homnay;
+</script>

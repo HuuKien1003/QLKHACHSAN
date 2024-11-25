@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "OrderThem";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<form action="/Home/OrderThem/@ViewBag.pdpid" method="post" class="container mt-5 p-4 border rounded shadow-sm bg-light">
+    <h2 class="text-center mb-4 text-primary">Danh sách dịch vụ</h2>
+
+    <div class="mb-3">
+        <label style="margin-bottom:5px" class="form-label">Order cho phòng</label>
+        <input class="form-control" value="@ViewBag.pname" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label style="margin-bottom:5px" class="form-label">Mã phiếu</label>
+        <input class="form-control" id="PhieuDatPhongId" value="@ViewBag.pdpid" name="PhieuDatPhongId" readonly />
+    </div>
+
+    @foreach (var item in ViewBag.DichVus)
+    {
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="@item.DichVuId" name="DichVuId[]" value="@item.DichVuId" onclick="toggleQuantity('@item.DichVuId', 'SL_@item.DichVuId')">
+            <label class="form-check-label" for="@item.DichVuId">@item.DichVuName - giá: @item.Gia</label>
+            <input type="number" class="form-control mt-2" id="SL_@item.DichVuId" name="SoLuong[]" value="1" disabled />
+        </div>
+    }
+
+    <div class="text-center">
+        <input class="btn btn-success btn-lg" type="submit" value="Order" />
+    </div>
+</form>
+
+<script>
+    function toggleQuantity(serviceId, quantityId) {
+        var service = document.getElementById(serviceId);
+        var quantity = document.getElementById(quantityId);
+        quantity.disabled = !service.checked;
+    }
+</script>

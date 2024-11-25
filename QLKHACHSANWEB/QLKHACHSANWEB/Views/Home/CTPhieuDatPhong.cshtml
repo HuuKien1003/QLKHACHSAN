@@ -1,0 +1,45 @@
+﻿@model QLKHACHSANWEB.Models.Phong
+@{
+    ViewBag.Title = "CTPhieuDatPhong";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+<div class="text-center">
+    <h2>Xác Nhận đặt phòng</h2>
+</div>
+
+<div class="container text-center text-bg-light" style=" width: 80%; font-weight: bold; font-size: 16px;position:relative;padding-bottom:60px;">
+
+    <p>
+        Xác nhận đặt phòng với thông tin phòng như sau
+    </p>
+
+    <table class="table">
+        <tr>
+            <td>Tên Phòng :@Model.PhongName</td>
+        </tr>
+        <tr>
+            <td>Mã Phòng :@Model.PhongId</td>
+        </tr>
+        <tr>
+            <td>Loại Phòng :@ViewBag.LP</td>
+        </tr>
+
+        <tr>
+            <td>Tên Khách hàng :@ViewBag.tkh</td>
+
+        </tr>
+        <tr>
+            <td>CCCD :@ViewBag.CCCD</td>
+        </tr>
+        <tr>
+            <td>SDT Khách Hàng :@ViewBag.SDT</td>
+        </tr>
+    </table>
+
+
+    <form action="/Home/CTPhieuDatPhong/@ViewBag.id" method="post" style="position:absolute;bottom:5px;left:20%">
+       
+        <button type="submit" class="btn btn-outline-info justify-content-center" style="font-size: 30px"><i style="color:seagreen;" class="fa-solid fa-check"></i>Xác nhận đăng ký</button>
+    </form>
+    <label  class="btn btn-outline-danger justify-content-center" style="font-size: 30px; position: absolute;bottom:5px;right:30%"><i style="color:red;" class="fa-sharp fa-solid fa-xmark"></i><a style="text-decoration: none;" class="text-reset"href="/Home/index">Cancel</a></label>
+</div>

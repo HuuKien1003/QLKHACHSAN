@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/font-awesome.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <style>
+        /* Gradient background for navbar */
+        .navbar {
+            background: linear-gradient(90deg, #17a2b8, #007bff);
+        }
+
+        /* Styling for the navbar brand */
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        /* Custom styling for the navbar links */
+        .navbar-nav .nav-link {
+            color: white !important;
+            margin-right: 10px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+            .navbar-nav .nav-link:hover {
+                color: #ffdd57 !important; /* Yellow color on hover */
+            }
+
+        /* Styling for the sidebar */
+        .list-group-item {
+            font-size: 1.1rem;
+            padding: 15px;
+            border: none;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .list-group-item:hover {
+                background-color: #007bff;
+                color: white;
+            }
+
+        /* Container background */
+        .container-fluid {
+            margin-top: 20px;
+        }
+
+        /* Custom styling for buttons in forms */
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+            .btn-custom:hover {
+                background-color: #218838;
+                transform: scale(1.05);
+            }
+
+        /* Footer position */
+        .footer {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Flex container for sticky footer */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Content should take all available space */
+        .content {
+            flex: 1;
+        }
+
+        /* Footer styles */
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div style="position:relative; display:block">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <a class="navbar-brand" href="#">Deluxe</a>
+            <div class="col-8">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/index">Đặt Phòng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/TraPhong/index">Trả phòng</a>
+                    </li>
+                    <li class="nav-item">
+                        <div style="cursor:pointer" class="nav-link" onclick="openForm()">Chi tiết</div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="cursor:pointer">Liên Hệ Hotline: 0868985055</a>
+                    </li>
+                    <li class="nav-item" style="position: absolute; right: 0; bottom: 10px">
+                        <a class="nav-link" href="/Phongs/index"><i class="fa-solid fa-gear"></i>Manager</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main container -->
+        <div class="container-fluid">
+            <div class="row gx-1" style="min-height:700px">
+              
+
+                <!-- Content area -->
+                <div class="col-12">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        
+        <div class="footer" style="
+    margin-top: 50px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;">
+            <p style="margin: 0;">&copy; 2024 Deluxe Hotel. All Rights Reserved.</p>
+        </div>
+
+        <div id="popupForm" style="display: none;">
+            <div class="modal-overlay" style="
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.7);">
+
+                <div style="
+            height: 600px;
+            width: 600px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+            position: relative;
+            padding: 30px;
+            overflow-y: auto;
+            font-family: 'Arial', sans-serif;">
+
+                    <button class="btn btn-close" type="button" style="
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: #dc3545;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;"
+                            onclick="closeForm()">
+                        ×
+                    </button>
+
+                    <h2 style="
+                color: #1a1a1a;
+                margin-bottom: 25px;
+                font-size: 28px;
+                border-bottom: 2px solid ;
+                padding-bottom: 10px;">
+                        Giới thiệu Khách sạn DeLuxe
+                    </h2>
+
+                    <div style="color: #333; line-height: 1.6;">
+                        <p style="margin-bottom: 20px;">
+                            Khách sạn DeLuxe tọa lạc tại vị trí đắc địa trong trung tâm thành phố, mang đến cho du khách một trải nghiệm nghỉ dưỡng sang trọng và thoải mái. Với thiết kế hiện đại kết hợp tinh tế giữa sự thanh lịch và ấm cúng, DeLuxe không chỉ là nơi dừng chân lý tưởng mà còn là điểm khởi đầu cho những cuộc khám phá đầy thú vị.
+                        </p>
+
+                        <h3 style="
+                    color: #2c3e50;
+                    margin: 20px 0 15px;
+                    font-size: 22px;">
+                            Thông tin chi tiết:
+                        </h3>
+
+                        <div style="
+                    background: #f8f9fa;
+                    padding: 20px;
+                    border-radius: 10px;
+                    margin-bottom: 20px;">
+                            <p><strong>Địa chỉ:</strong> 123 Đường Xuân Diệu, Quận 1, Thành phố Hồ Chí Minh</p>
+                            <p><strong>Số phòng:</strong> 30 phòng với nhiều loại hình như phòng Superior, Deluxe và Suite.</p>
+                        </div>
+
+                        <h3 style="
+                    color: #2c3e50;
+                    margin: 20px 0 15px;
+                    font-size: 22px;">
+                            Tiện nghi:
+                        </h3>
+                        <ul style="
+                    list-style-type: none;
+                    padding-left: 0;
+                    margin-bottom: 20px;">
+                            <li style="margin-bottom: 10px;">🏊‍♂️ Hồ bơi vô cực</li>
+                            <li style="margin-bottom: 10px;">💆‍♀️ Spa</li>
+                            <li style="margin-bottom: 10px;">💪 Phòng gym</li>
+                            <li style="margin-bottom: 10px;">🍽️ Nhà hàng phục vụ ẩm thực quốc tế</li>
+                            <li style="margin-bottom: 10px;">🍸 Quầy bar sang trọng</li>
+                        </ul>
+
+                        <h3 style="
+                    color: #2c3e50;
+                    margin: 20px 0 15px;
+                    font-size: 22px;">
+                            Dịch vụ:
+                        </h3>
+                        <ul style="
+                    list-style-type: none;
+                    padding-left: 0;
+                    margin-bottom: 20px;">
+                            <li style="margin-bottom: 10px;">🖥️ Đặt phòng trực tuyến</li>
+                            <li style="margin-bottom: 10px;">🚗 Đưa đón sân bay</li>
+                            <li style="margin-bottom: 10px;">⏰ Dịch vụ lễ tân 24/7</li>
+                            <li style="margin-bottom: 10px;">🎉 Tổ chức sự kiện và hội nghị</li>
+                        </ul>
+
+                        <div style="
+                    text-align: center;
+                    margin-top: 30px;
+                    padding: 20px;
+                    background: #f8f9fa;
+                    border-radius: 10px;">
+                            <p style="
+                        font-style: italic;
+                        color: #666;
+                        margin: 0;">Hãy đến với Khách sạn DeLuxe để tận hưởng những khoảnh khắc tuyệt vời trong hành trình khám phá!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+</html>
+
+<script>
+    function openForm(roomName, roomStatus, roomType) {
+        document.getElementById("popupForm").style.display = "flex";
+    }
+
+    function closeForm() {
+        document.getElementById("popupForm").style.display = "none";
+    }
+
+</script>

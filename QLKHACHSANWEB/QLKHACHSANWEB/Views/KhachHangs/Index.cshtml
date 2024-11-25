@@ -1,0 +1,46 @@
+﻿@model IEnumerable<QLKHACHSANWEB.Models.KhachHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.KhachHangName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CCCD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhachHangName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CCCD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.KhachHangId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.KhachHangId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.KhachHangId })
+        </td>
+    </tr>
+}
+
+</table>

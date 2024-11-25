@@ -1,0 +1,189 @@
+﻿@model List<QLKHACHSANWEB.Models.Phong>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<style>
+    .card-custom {
+        background-color: #28a745; /* Green background */
+        color: white; /* White text color */
+        height: 200px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+        .card-custom:hover {
+            transform: scale(1.05); /* Slightly grow on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+        }
+
+        .card-custom h1 {
+            font-size: 2.5rem; /* Large font for room name */
+            font-weight: bold;
+        }
+
+        .card-custom p {
+            font-size: 1.2rem; /* Medium font for room status */
+        }
+
+        .card-custom.red {
+            background-color: #CC6666; /* Red background for status = 1 */
+        }
+
+        .card-custom.yellow {
+            background-color: #FFD966; /* Yellow background for status = 2 */
+            color: black; /* Black text for better contrast on yellow */
+        }
+
+    .container-fluid {
+        margin-top: 20px;
+    }
+
+    button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: #007bff; /* Blue background for buttons */
+        transition: background-color 0.3s ease;
+    }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+    .text-reset {
+        color: white; /* White link text */
+    }
+
+        .text-reset:hover {
+            text-decoration: underline; /* Underline link on hover */
+        }
+</style>
+
+<div class="container-fluid" style="border:solid 1px; min-height:300px; position:relative">
+    <div class="col-12 mb-2">
+        <i style="font-size:20px" class="fa-solid fa-table-list"></i> Sơ đồ Phòng
+    </div>
+
+    <!-- Form lọc dữ liệu -->
+    <form action="/Home/index/@ViewBag.strSearch" method="get">
+        <div class="container-fluid">
+            <h5>Loại Phòng</h5>
+            @foreach (var item in ViewBag.loai)
+            {
+                <button type="submit" value="@item.TenLoai" id="strSearch" name="strSearch">@item.TenLoai</button>
+            }
+        </div>
+        <h5>Trạng thái phòng</h5>
+        <button type="submit" value="0" id="strSearch"style=" background-color: #28a745;" name="sr">Phòng trống (0)</button>
+        <button type="submit" value="1" id="strSearch" style="background-color: #CC6666; " name="sr">Có Khách (1)</button>
+        <button type="submit" value="2" id="strSearch" style="background-color: #FFD966 " name="sr">Đang dọn dẹp (2)</button>
+    </form>
+
+    <!-- Danh sách các phòng -->
+    @if (Model != null && Model.Any())
+    {
+        <div style="margin:30px"></div>
+        <div class="container-fluid text-center">
+            <div class="row row-col-8 gx-2 gy-2">
+                @foreach (var item in Model)
+ {
+     var cardClass = "card-custom"; // Default class for the card
+
+     // Change class based on the status
+     if (item.TrangThai == 1)
+     {
+         cardClass += " red";
+     }
+     else if (item.TrangThai == 2)
+     {
+         cardClass += " yellow";
+     }
+     else
+     {
+         cardClass += "";    
+     }
+     <div class="col-2">
+         <div class="card @cardClass ratio ratio-1x1"onclick="open1Form('@item.PhongName', '@item.TrangThai.ToString()', '@item.LoaiPhong.TenLoai')">
+                            <div class="card-body">
+                                <h1><a class="text-reset text-decoration-none" href="#">@item.PhongName</a></h1>
+                                <p>@item.TrangThai</p>
+                                <h4>@item.LoaiPhong.TenLoai</h4>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <h3 class="text-danger">Không tìm thấy kết quả nào.</h3>
+    }
+
+
+
+
+
+
+
+    <div id="popup1Form" style="display: none;">
+        <div class="modal-overlay" style="height: 100%; width: 100%; background: rgba(0, 0, 0, 0.7); position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; justify-content: center; align-items: center; z-index: 1000;">
+            <form action="/Home/DoiPhong/@ViewBag.maphong" id="roomForm" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); width: 100%; max-width: 450px; font-family: system-ui, -apple-system, sans-serif;" method="post">
+                <h3 style="margin: 0 0 1.5rem; color: #2d3748; font-size: 1.5rem; font-weight: 600; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.75rem;">
+                    Đổi phòng
+                </h3>
+
+                <div style="margin-bottom: 1rem;">
+                    <label for="roomName" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #4a5568;">Số Phòng mới:</label>
+                    <input type="text" id="roomName" name="roomName" readonly style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e0; border-radius: 6px; background: #f7fafc;" />
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label for="roomStatus" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #4a5568;">Trạng thái:</label>
+                    <input type="text" id="roomStatus" name="roomStatus" readonly style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e0; border-radius: 6px; background: #f7fafc;" />
+                </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <label for="roomType" style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #4a5568;">Loại phòng:</label>
+                    <input type="text" id="roomType" name="roomType" readonly style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e0; border-radius: 6px; background: #f7fafc;" />
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 500; color: #4a5568;">Số phòng cũ</label>
+                    <input value="@ViewBag.nem" readonly style="width: 100%; padding: 0.5rem; border: 1px solid #cbd5e0; border-radius: 6px; background: #f7fafc;" />
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+                    <button type="button" onclick="close1Form()" style="padding: 0.5rem 1rem; border: none; border-radius: 6px; background: #ecc94b; color: #744210; font-weight: 500; cursor: pointer; transition: background 0.2s;">
+                        Close
+                    </button>
+                    <button type="submit" style="padding: 0.5rem 1rem; border: none; border-radius: 6px; background: #4299e1; color: white; font-weight: 500; cursor: pointer; transition: background 0.2s;">
+                        Xác Nhận
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Hàm mở form và điền dữ liệu
+        function open1Form(roomName, roomStatus, roomType) {
+            // Hiển thị form popup
+            document.getElementById("popup1Form").style.display = "flex";
+
+            // Truyền dữ liệu vào các trường trong form
+            document.getElementById("roomName").value = roomName;
+            document.getElementById("roomStatus").value = roomStatus;
+            document.getElementById("roomType").value = roomType;
+        }
+
+        // Hàm đóng form popup
+        function close1Form() {
+            // Ẩn form popup
+            document.getElementById("popup1Form").style.display = "none";
+        }
+    </script>
+</div>>
+

@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "login";
+    Layout = "~/Views/Shared/_LayoutPage2.cshtml";
+}
+
+<style>
+    /* Căn chỉnh toàn bộ trang */
+    .col-12 {
+        font-family: 'Arial', sans-serif;
+        background-color: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    /* Tạo hiệu ứng cho form đăng nhập */
+    .login-containerr {
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Thiết kế cho label và input */
+    label {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    input:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .error-message {
+        color: red;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Thiết kế cho màn hình nhỏ (Mobile) */
+  
+</style>
+
+    <div class="login-containerr ">
+        <h2>@ViewBag.Title</h2>
+
+        <form method="post" action="@Url.Action("login", "Users")">
+            <div>
+                <label for="username">Tên Đăng Nhập</label>
+                <input type="text" id="username" name="username" required />
+            </div>
+            <div>
+                <label for="password">Mật Khẩu</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <div>
+                <button type="submit">Đăng Nhập</button>
+            </div>
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="error-message">
+                    @ViewBag.ErrorMessage
+                </div>
+            }
+        </form>
+    </div>
